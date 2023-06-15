@@ -1,0 +1,11 @@
+.work{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 20vw;
+    margin-top: 1vh;
+}
