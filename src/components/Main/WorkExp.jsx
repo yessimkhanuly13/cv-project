@@ -11,6 +11,8 @@ export class WorkExp extends Component {
         <input placeholder='Start Date'></input>
         <input placeholder='End Date'></input>
         <input placeholder='Description'></input>
+        <br></br>
+        <button onClick={this.props.add}>add</button>
       </div>
     )
   }
