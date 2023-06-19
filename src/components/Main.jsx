@@ -7,16 +7,46 @@ import Preview from './Preview/Preview'
 
 
 export class Main extends Component {
+  constructor(){
+    super();
+    this.state = {
+      personaldetails:{
+        name:"",
+        title:"",
+        desc:"",
+        location:"",
+        phone:"",
+        email:""
+      }
+    }
+  }
+
+  handleChangePersonal = (e) =>{
+    const {name, value} = e.target;
+    this.setState((prevState) => ({
+      personaldetails:{
+        ...prevState.personaldetails,
+        [name]: value
+      }
+    }))
+    
+    // console.log(this.state.personaldetails )
+    console.log(e.target)
+  }
+
   render() {
     return (
       <div className='main'>
         <div className='left'>
-            <PersonalDetails/>
+            <PersonalDetails 
+              data={this.state.personaldetails} 
+              onChange={this.handleChangePersonal} 
+              />
             <Education/>
             <WorkExp/>
         </div>
         <div className='right'>
-            <Preview/>
+            <Preview data={this.state.personaldetails} />
         </div>
       </div>
     )
