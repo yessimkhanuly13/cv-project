@@ -7,6 +7,10 @@ export class WorkExp extends Component {
     this.props.onChange(e, this.props.data.id)
     console.log(this.props.data)
   }
+
+  handleDelete = () =>{
+    this.props.onDelete(this.props.data.id);
+  }
   
   render() {
     return (
@@ -16,6 +20,8 @@ export class WorkExp extends Component {
         <input placeholder='Start Date' onChange={this.handleChange} name="start"></input>
         <input placeholder='End Date' onChange={this.handleChange} name="end"></input>
         <input placeholder='Description'onChange={this.handleChange} name="desc"></input>
+        <br></br>
+        <button onClick={this.handleDelete}>Delete</button>
         <br></br>
       </div>
     )

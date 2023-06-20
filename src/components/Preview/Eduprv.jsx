@@ -6,11 +6,14 @@ export class Eduprv extends Component {
       <>
         {this.props.data.map((item)=>(
           <div className='eduprv'>
-            <p>{item.course}</p>
-            <p>{item.uni}</p>
-            <p>{item.start}</p>
-            <p>{item.end}</p>
-            <p>{item.desc}</p>
+            <div className='data-edu'>
+              <p>{item.course}</p>
+              <p>{item.uni}</p>
+              <p>{item.desc}</p>
+            </div>
+            <div className='edu-date'>
+              <p>{item.start} - {item.end}</p>
+            </div>
           </div>
         ))}
       </>

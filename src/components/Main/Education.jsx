@@ -8,6 +8,10 @@ export class Education extends Component {
     // console.log(this.props.data.education)
   }
 
+  handleDelete = () =>{
+    this.props.onDelete(this.props.data.id);
+  }
+
   render() {
     return (
       <div className='edu'>
@@ -16,6 +20,8 @@ export class Education extends Component {
         <input placeholder='Start Date' onChange={this.handleInputChange} name="start"></input>
         <input placeholder='End Date' onChange={this.handleInputChange} name="end"></input>
         <input placeholder='Description' onChange={this.handleInputChange} name="desc"></input>
+        <br></br>
+        <button onClick={this.handleDelete}>Delete</button>
         <br></br>
       </div>
     )

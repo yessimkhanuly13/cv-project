@@ -6,14 +6,16 @@ export class Personalprv extends Component {
     const {data} = this.props;
     return (
       <div className='personalprv'>
-          <p>{data.name}</p>
-        <div className='top'>
-          <p>{data.title}</p>
-          <ul>
-            <li>{data.location}</li>
-            <li>{data.email}</li>
-            <li>{data.phone}</li>
-          </ul>
+        <div className="header-prv">
+          <div className="left-prv">
+            <span className='name'>{data.name}</span>
+            <p>{data.title}</p>
+          </div>
+          <div className='right-prv'>
+              <li>{data.location}</li>
+              <li>{data.email}</li>
+              <li>{data.phone}</li>
+          </div>
         </div>
         <p>{data.desc}</p>
       </div>

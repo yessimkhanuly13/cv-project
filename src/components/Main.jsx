@@ -121,6 +121,27 @@ export class Main extends Component {
     })
   }
 
+  handleDeleteEdu = (id) =>{
+    this.setState((prevState)=>{
+      const eduItems = prevState.education.filter((item)=>item.id !== id);
+      return {
+        ...prevState,
+        education:[...eduItems]
+      }
+    })
+    console.log(this.state.education)
+  }
+  
+  handleDeleteWork = (id) =>{
+    this.setState((prevState)=>{
+      const workItems = prevState.work.filter((item)=>item.id !== id);
+      return {
+        ...prevState,
+        work: [...workItems]
+      }
+    })
+  }
+
 
   render() {
     return (
@@ -137,6 +158,7 @@ export class Main extends Component {
                 <Education
                   onChange={this.handleChangeEdu}
                   data={item}
+                  onDelete={this.handleDeleteEdu}
                   />
               ))
             }
@@ -149,6 +171,7 @@ export class Main extends Component {
                 <WorkExp
                   onChange={this.handleChangeWork}
                   data={item}
+                  onDelete={this.handleDeleteWork}
                 />
               ))
             }

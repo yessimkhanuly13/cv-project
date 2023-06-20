@@ -2,26 +2,6 @@
     border: 1px solid;
     height: 100%;
     width: 40vw;
-}
-
-.personalprv{
-    display: flex;
-    flex-direction: column;
-    margin: 0;
     padding: 0;
-    
-}
-
-.top{
-    display: flex;
-    justify-content: space-around;
-}
-
-p{
     margin: 0;
-    padding: 0;
-}
-
-li{
-    list-style-type: none;
 }
