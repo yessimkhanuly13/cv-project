@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import './Preview.css'
+import './Styles/Preview.css'
 import Personalprv from './Personalprv'
-// import Eduprv from './Eduprv';
-// import Workprv from './Workprv';
+import Eduprv from './Eduprv';
+import Workprv from './Workprv';
 
 export class Preview extends Component {
   render() {
@@ -10,16 +10,8 @@ export class Preview extends Component {
     return (
       <div className='preview'>
         <Personalprv data={data.personaldetails}/>
-        {/* {
-          data.education.map((item)=>(
-            <Eduprv data={item}/>
-          ))
-        }
-        {
-          data.work.map((item)=>(
-            <Workprv data={item}/>
-          ))
-        } */}
+        <Eduprv data={data.education}/>
+        <Workprv data={data.work}/>
       </div>
     )
   }
