@@ -22,6 +22,7 @@ export class Main extends Component {
       education:[
         {
           id:uniqid(),
+          course:"",
           uni:"",
           start:"",
           end:"",
@@ -37,7 +38,8 @@ export class Main extends Component {
           end:"",
           position:""
         }
-      ]
+      ], 
+      popupEdu:true,
     }
   }
 
@@ -61,13 +63,13 @@ export class Main extends Component {
         ...prevState.education, 
         {
           id:uniqid(),
+          course:"",
           uni:"",
           start:"",
           end:"",
           desc:""
         }
-      ]
-
+      ],
     }))
     console.log(this.state)
   }
@@ -102,6 +104,21 @@ export class Main extends Component {
       })
       return {education: eduItem} //переписываем массив в this.state
     })
+
+    console.log(this.state.education)
+  }
+
+  handleChangeWork = (e, id) =>{
+    const {name, value} = e.target;
+    this.setState((prevState)=>{
+      const workItem = prevState.work.map((item)=>{
+        if(item.id === id){
+          return {...item, [name]:value}
+        }
+        return item;
+      })
+      return {work: workItem}
+    })
   }
 
 
@@ -113,19 +130,33 @@ export class Main extends Component {
               data={this.state.personaldetails} 
               onChange={this.handleChangePersonal} 
               />
-            <Education
-              data={this.state.education} 
-              add={this.handleAddEducation}
-              onChange={this.handleChangeEdu}
-              />
-            <WorkExp
-              data={this.state.work}
-              add={this.handleAddWork}
-              // onChange={}
-            />
+
+            <h2>Education</h2>
+            {
+              this.state.education.map((item)=>(
+                <Education
+                  onChange={this.handleChangeEdu}
+                  data={item}
+                  />
+              ))
+            }
+
+            <button onClick={this.handleAddEducation}>Add</button>
+            
+            <h2>Work Experience</h2>
+            {
+              this.state.work.map((item)=>(
+                <WorkExp
+                  onChange={this.handleChangeWork}
+                  data={item}
+                />
+              ))
+            }
+            <button onClick={this.handleAddWork}>Add</button>
+            
         </div>
         <div className='right'>
-            <Preview data={this.state.personaldetails} />
+            <Preview data={this.state} />
         </div>
       </div>
     )

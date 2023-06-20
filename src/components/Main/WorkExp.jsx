@@ -2,17 +2,21 @@ import React, { Component } from 'react'
 import './Styles/WorkExp.css'
 
 export class WorkExp extends Component {
+  
+  handleChange = (e) =>{
+    this.props.onChange(e, this.props.data.id)
+    console.log(this.props.data)
+  }
+  
   render() {
     return (
       <div className='work'>
-        <h2>Work Experience</h2>
-        <input placeholder='Company'></input>
-        <input placeholder='Position'></input>
-        <input placeholder='Start Date'></input>
-        <input placeholder='End Date'></input>
-        <input placeholder='Description'></input>
+        <input placeholder='Company' onChange={this.handleChange}name='company'></input>
+        <input placeholder='Position' onChange={this.handleChange} name="position"></input>
+        <input placeholder='Start Date' onChange={this.handleChange} name="start"></input>
+        <input placeholder='End Date' onChange={this.handleChange} name="end"></input>
+        <input placeholder='Description'onChange={this.handleChange} name="desc"></input>
         <br></br>
-        <button onClick={this.props.add}>add</button>
       </div>
     )
   }
