@@ -39,7 +39,7 @@ export class Main extends Component {
           position:""
         }
       ], 
-      popupEdu:true,
+  
     }
   }
 

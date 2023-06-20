@@ -1,22 +1,25 @@
 import React, { Component } from 'react'
 import './Preview.css'
+import Personalprv from './Personalprv'
+// import Eduprv from './Eduprv';
+// import Workprv from './Workprv';
 
 export class Preview extends Component {
   render() {
+    const {data} = this.props;
     return (
       <div className='preview'>
-        <h1>{this.props.data.personaldetails.name}</h1>
-        <p>{this.props.data.personaldetails.title}</p>
-        <p>{this.props.data.personaldetails.location}</p>
-        <p>{this.props.data.personaldetails.phone}</p>
-        <p>{this.props.data.personaldetails.email}</p>
-        <p>{this.props.data.personaldetails.desc}</p>
-        {this.props.data.education.map((item)=>(
-          <p>{item.uni}</p>
-        ))}
-        {this.props.data.work.map((item)=>(
-          <p>{item.company}</p>
-        ))}
+        <Personalprv data={data.personaldetails}/>
+        {/* {
+          data.education.map((item)=>(
+            <Eduprv data={item}/>
+          ))
+        }
+        {
+          data.work.map((item)=>(
+            <Workprv data={item}/>
+          ))
+        } */}
       </div>
     )
   }
