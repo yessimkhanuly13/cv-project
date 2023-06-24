@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './Styles/Preview.css'
+import './Styles/Personalprv.css'
 
 export class Personalprv extends Component {
   render() {
@@ -7,11 +7,9 @@ export class Personalprv extends Component {
     return (
       <div className='personalprv'>
         <div className="header-prv">
-          <div className="left-prv">
-            <span className='name'>{data.name}</span>
+            <h2 className='name'>{data.name}</h2>
             <p>{data.title}</p>
-          </div>
-          <div className='right-prv'>
+          <div className='loc-em-phone'>
               <li>{data.location}</li>
               <li>{data.email}</li>
               <li>{data.phone}</li>

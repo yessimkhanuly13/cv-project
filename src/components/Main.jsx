@@ -12,31 +12,31 @@ export class Main extends Component {
     super();
     this.state = {
       personaldetails:{
-        name:"",
-        title:"",
-        desc:"",
-        location:"",
-        phone:"",
-        email:""
+        name:"Chi Zuri",
+        title:"Software Engineer",
+        desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna condimentum mattis pellentesque id nibh. Id aliquet risus feugiat in ante metus dictum. Lorem mollis aliquam ut porttitor leo a diam. Nunc sed id semper risus. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Leo vel fringilla est ullamcorper eget. Sapien nec sagittis aliquam malesuada. Sit amet luctus venenatis lectus magna fringilla. Et netus et malesuada fames ac. Aliquam purus sit amet luctus.",
+        location:"Astana, Kazakhstan",
+        phone:"+7 (777) 777 77 77",
+        email:"example@example.com"
       }, 
       education:[
         {
           id:uniqid(),
-          course:"",
-          uni:"",
-          start:"",
-          end:"",
-          desc:""
+          course:"CS50",
+          uni:"Harvard",
+          start:"25 September 2023",
+          end:"25 June 2027",
+          desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna condimentum mattis pellentesque id nibh. Id aliquet risus feugiat in ante metus dictum. Lorem mollis aliquam ut porttitor leo a diam. Nunc sed id semper risus. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Leo vel fringilla est ullamcorper eget. Sapien nec sagittis aliquam malesuada. Sit amet luctus venenatis lectus magna fringilla. Et netus et malesuada fames ac. Aliquam purus sit amet luctus."
         }
       ],
       work:[
         {
           id:uniqid(),
-          company:"",
-          desc:"",
-          start:"",
-          end:"",
-          position:""
+          company:"Apple",
+          desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At urna condimentum mattis pellentesque id nibh. Id aliquet risus feugiat in ante metus dictum. Lorem mollis aliquam ut porttitor leo a diam. Nunc sed id semper risus. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Leo vel fringilla est ullamcorper eget. Sapien nec sagittis aliquam malesuada. Sit amet luctus venenatis lectus magna fringilla. Et netus et malesuada fames ac. Aliquam purus sit amet luctus.",
+          start:"25 September 2023",
+          end:"25 June 2027",
+          position:"Software Engineer"
         }
       ], 
   
@@ -152,7 +152,7 @@ export class Main extends Component {
               onChange={this.handleChangePersonal} 
               />
 
-            <h2>Education</h2>
+            <h2 className='mr-h2'>Education</h2>
             {
               this.state.education.map((item)=>(
                 <Education
@@ -163,9 +163,9 @@ export class Main extends Component {
               ))
             }
 
-            <button onClick={this.handleAddEducation}>Add</button>
+            <button  className='add-btn' onClick={this.handleAddEducation}>Add</button>
             
-            <h2>Work Experience</h2>
+            <h2 className='mr-h2'>Work Experience</h2>
             {
               this.state.work.map((item)=>(
                 <WorkExp
@@ -175,7 +175,7 @@ export class Main extends Component {
                 />
               ))
             }
-            <button onClick={this.handleAddWork}>Add</button>
+            <button className='add-btn' onClick={this.handleAddWork}>Add</button>
             
         </div>
         <div className='right'>

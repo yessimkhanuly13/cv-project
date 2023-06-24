@@ -1,0 +1,15 @@
+.personalprv{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+}
+
+.loc-em-phone{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.loc-em-phone li{
+    margin-right: 2rem;
+}

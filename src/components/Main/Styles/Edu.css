@@ -9,3 +9,11 @@ input{
     width: 20vw;
     margin-top: 1vh;
 }
+
+button{
+    border: none;
+    padding: 0.5rem;
+    width: 20vw;
+    color: white;
+    font-weight: 500;
+}

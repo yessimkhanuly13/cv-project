@@ -21,7 +21,7 @@ export class WorkExp extends Component {
         <input placeholder='End Date' onChange={this.handleChange} name="end"></input>
         <input placeholder='Description'onChange={this.handleChange} name="desc"></input>
         <br></br>
-        <button onClick={this.handleDelete}>Delete</button>
+        <button className='del-btn' onClick={this.handleDelete}>Delete</button>
         <br></br>
       </div>
     )

@@ -21,7 +21,7 @@ export class Education extends Component {
         <input placeholder='End Date' onChange={this.handleInputChange} name="end"></input>
         <input placeholder='Description' onChange={this.handleInputChange} name="desc"></input>
         <br></br>
-        <button onClick={this.handleDelete}>Delete</button>
+        <button className='del-btn' onClick={this.handleDelete}>Delete</button>
         <br></br>
       </div>
     )

@@ -1,11 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
 .main{
     display: grid;
-    grid-template-columns: 50vw 50vw;
+    grid-template-columns: 47vw 47vw;
     margin: 0;
     padding: 0;
+    overflow-wrap: break-word;
+    margin-bottom: 2rem;
 }
 
 .head{
-    background-color: blueviolet;
-    color: azure;
+    margin-bottom: 2rem;
+}
+
+.add-btn{
+    background-color: green;
+}
+
+.del-btn{
+    background-color: red;
+}
+
+.mr-h2{
+    margin-top:2.5rem;
 }

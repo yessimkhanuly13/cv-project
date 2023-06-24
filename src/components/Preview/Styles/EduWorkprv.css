@@ -1,0 +1,20 @@
+.edu-workprv{
+    display: grid;
+    grid-template-columns: 15vw 25vw;
+}
+
+.edu-work-header{
+    text-align: start;
+}
+
+
+.edu-work-date{
+    font-size: 0.7rem;
+    text-align: start;
+}
+
+
+.data-edu-work{
+    text-align: start;
+}
+
